@@ -1,0 +1,413 @@
+/* Donate Food page */
+.donate-food-page {
+  min-height: 100vh;
+  padding: 32px 16px 64px;
+  background:
+    radial-gradient(900px 400px at 85% -10%, #d9f2e3 0%, transparent 60%),
+    radial-gradient(700px 380px at -10% 10%, #fdf0d5 0%, transparent 55%),
+    #f6faf7;
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color: #1b2a22;
+  box-sizing: border-box;
+}
+
+.donate-food-page *,
+.donate-food-page *::before,
+.donate-food-page *::after {
+  box-sizing: border-box;
+}
+
+.donate-food-container {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border: 1px solid #d5e4da;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #2f5d43;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.back-button:hover {
+  background: #eef7f1;
+  transform: translateX(-2px);
+}
+
+.donate-food-header {
+  text-align: center;
+  margin: 28px 0 32px;
+}
+
+.header-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 14px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #2f8f5b, #1f6b43);
+  box-shadow: 0 10px 24px rgba(31, 107, 67, 0.28);
+}
+
+.donate-food-header h1 {
+  margin: 0 0 8px;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #163826;
+}
+
+.donate-food-header p {
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #5d7266;
+}
+
+.donate-food-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Section cards */
+.form-card {
+  padding: 26px 28px 28px;
+  background: #ffffff;
+  border: 1px solid #e3ede6;
+  border-radius: 18px;
+  box-shadow: 0 6px 22px rgba(25, 70, 45, 0.06);
+}
+
+.card-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eef4f0;
+}
+
+.card-icon {
+  width: 42px;
+  height: 42px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: #1f6b43;
+  background: #e5f4ec;
+}
+
+.card-heading h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #163826;
+}
+
+.card-heading p {
+  margin: 2px 0 0;
+  font-size: 13.5px;
+  color: #7a8c82;
+}
+
+/* Fields */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #3b4f44;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 15px;
+  color: #1b2a22;
+  background: #fbfdfc;
+  border: 1.5px solid #dbe7df;
+  border-radius: 11px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a5b3aa;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #bcd3c4;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  background: #ffffff;
+  border-color: #2f8f5b;
+  box-shadow: 0 0 0 4px rgba(47, 143, 91, 0.14);
+}
+
+/* Safety declaration */
+.safety-confirmation {
+  padding: 20px 24px;
+  background: #fff9ea;
+  border: 1px solid #f3e3b3;
+  border-radius: 16px;
+}
+
+.safety-confirmation label {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #4a4130;
+}
+
+.safety-confirmation input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-top: 3px;
+  flex: none;
+  accent-color: #2f8f5b;
+  cursor: pointer;
+}
+
+.safety-confirmation strong {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+  color: #3a3220;
+}
+
+/* Submit */
+.donate-submit-button {
+  width: 100%;
+  padding: 16px;
+  font-size: 16.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2f8f5b, #1f6b43);
+  box-shadow: 0 10px 24px rgba(31, 107, 67, 0.3);
+  transition: transform 0.15s, box-shadow 0.2s, opacity 0.2s;
+}
+
+.donate-submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(31, 107, 67, 0.36);
+}
+
+.donate-submit-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.donate-error,
+.donate-success {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+.donate-error {
+  color: #9b2226;
+  background: #fdeceb;
+  border: 1px solid #f5c6c4;
+}
+
+.donate-success {
+  color: #1d5d3b;
+  background: #e8f6ee;
+  border: 1px solid #b9e0c9;
+}
+
+/* Matched organisations */
+.invitation-links-section {
+  margin-top: 28px;
+  padding: 26px 28px;
+  background: #ffffff;
+  border: 1px solid #e3ede6;
+  border-radius: 18px;
+  box-shadow: 0 6px 22px rgba(25, 70, 45, 0.06);
+}
+
+.invitation-links-section h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: #163826;
+}
+
+.invitation-links-section > p {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #6b7f73;
+}
+
+.invitation-link-card {
+  margin-top: 12px;
+  padding: 16px 18px;
+  background: #f7fbf8;
+  border: 1px solid #e0ece4;
+  border-radius: 14px;
+}
+
+.invitation-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.invitation-top h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #163826;
+}
+
+.distance-chip {
+  flex: none;
+  padding: 4px 12px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #1f6b43;
+  background: #dff1e6;
+  border-radius: 999px;
+}
+
+.invitation-link-card input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 12.5px;
+  color: #51655a;
+  background: #ffffff;
+  border: 1px solid #dbe7df;
+  border-radius: 9px;
+}
+
+.invitation-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.invitation-actions button {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #2f8f5b;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.invitation-actions button:hover {
+  background: #1f6b43;
+}
+
+.invitation-actions a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f6b43;
+  text-decoration: none;
+}
+
+.invitation-actions a:hover {
+  text-decoration: underline;
+}
+
+.no-invitation-message {
+  margin-top: 20px;
+  padding: 14px 18px;
+  font-size: 14px;
+  color: #7a5b13;
+  background: #fff6dd;
+  border: 1px solid #f0dca0;
+  border-radius: 12px;
+}
+
+@media (max-width: 640px) {
+  .donate-food-page {
+    padding: 20px 12px 48px;
+  }
+
+  .form-card,
+  .invitation-links-section {
+    padding: 20px 18px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .donate-food-header h1 {
+    font-size: 28px;
+  }
+}
+
+.fallback-note {
+  padding: 12px 16px;
+  color: #7a5b13 !important;
+  background: #fff6dd;
+  border: 1px solid #f0dca0;
+  border-radius: 10px;
+}

@@ -1,0 +1,602 @@
+* {
+  box-sizing: border-box;
+}
+
+.admin-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f4f8f6;
+  color: #173b2c;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.admin-sidebar {
+  width: 245px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-right: 1px solid #dfe9e4;
+  display: flex;
+  flex-direction: column;
+  padding: 22px 18px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.admin-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+
+.admin-logo-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #159447;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px;
+  border-radius: 14px;
+  background: #eefaf3;
+  margin-bottom: 25px;
+}
+
+.admin-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.admin-profile strong {
+  display: block;
+  font-size: 13px;
+}
+
+.admin-profile span {
+  display: block;
+  margin-top: 3px;
+  color: #708178;
+  font-size: 11px;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.admin-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.admin-nav-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 12px 13px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #385348;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+}
+
+.admin-nav-item:hover {
+  background: #eefaf3;
+}
+
+.admin-nav-item.active {
+  background: #d9f8e4;
+  color: #08783c;
+  font-weight: 700;
+}
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.admin-logout {
+  margin-top: auto;
+  border: none;
+  background: #ffe4e4;
+  color: #dc2626;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.admin-logout:hover {
+  background: #ffd2d2;
+}
+
+/* =========================================
+   MAIN
+========================================= */
+
+.admin-main {
+  margin-left: 245px;
+  width: calc(100% - 245px);
+  padding: 30px 34px 60px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.admin-header p {
+  margin: 7px 0 0;
+  color: #718078;
+}
+
+.admin-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-refresh {
+  border: none;
+  background: #149447;
+  color: white;
+  padding: 11px 17px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.admin-refresh:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-header-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.admin-error {
+  background: #ffe5e5;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+  padding: 13px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.admin-stat-card {
+  background: white;
+  border: 1px solid #e3ebe7;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.03);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-icon.users {
+  background: #e4f0ff;
+  color: #2563eb;
+}
+
+.stat-icon.donations {
+  background: #fff1dc;
+  color: #ea8b00;
+}
+
+.stat-icon.volunteers {
+  background: #e7f8eb;
+  color: #159447;
+}
+
+.stat-icon.completed {
+  background: #ffe7ed;
+  color: #e83e6f;
+}
+
+.admin-stat-card span {
+  display: block;
+  color: #75847c;
+  font-size: 13px;
+}
+
+.admin-stat-card strong {
+  display: block;
+  margin-top: 5px;
+  font-size: 26px;
+  color: #173b2c;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.admin-section {
+  background: white;
+  border: 1px solid #e2ebe6;
+  border-radius: 17px;
+  padding: 24px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.025);
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 21px;
+}
+
+.section-title p {
+  margin: 5px 0 0;
+  color: #7b8982;
+  font-size: 13px;
+}
+
+/* =========================================
+   ROLE CARDS
+========================================= */
+
+.role-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.role-card {
+  border: 1px solid #e1ebe5;
+  border-radius: 13px;
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #159447;
+}
+
+.role-card span {
+  display: block;
+  color: #718078;
+  font-size: 13px;
+}
+
+.role-card strong {
+  display: block;
+  font-size: 23px;
+  margin-top: 3px;
+}
+
+/* =========================================
+   DONATION STATUS
+========================================= */
+
+.donation-status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.donation-status-grid > div {
+  background: #f7faf8;
+  border: 1px solid #e1ebe5;
+  border-radius: 13px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.donation-status-grid svg {
+  grid-row: span 2;
+  color: #159447;
+}
+
+.donation-status-grid span {
+  font-size: 13px;
+  color: #74827b;
+}
+
+.donation-status-grid strong {
+  font-size: 23px;
+}
+
+/* =========================================
+   TABLE
+========================================= */
+
+.admin-table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 13px;
+  background: #f6f9f7;
+  color: #617169;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.admin-table td {
+  padding: 14px 13px;
+  border-bottom: 1px solid #edf1ef;
+  font-size: 13px;
+}
+
+.table-user {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.small-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #dff6e8;
+  color: #08783c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.food-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.food-name svg {
+  color: #159447;
+}
+
+/* =========================================
+   BADGES
+========================================= */
+
+.role-badge,
+.status-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.role-badge.donor {
+  background: #e5f0ff;
+  color: #2563eb;
+}
+
+.role-badge.receiver {
+  background: #fff0df;
+  color: #c66b00;
+}
+
+.role-badge.volunteer {
+  background: #e1f8e8;
+  color: #08783c;
+}
+
+.role-badge.admin {
+  background: #f0e8ff;
+  color: #7c3aed;
+}
+
+.status-badge.available {
+  background: #e3f8ea;
+  color: #08783c;
+}
+
+.status-badge.volunteer-requested {
+  background: #fff1dc;
+  color: #b86b00;
+}
+
+.status-badge.volunteer-assigned {
+  background: #e6edff;
+  color: #3454c5;
+}
+
+.status-badge.picked-up {
+  background: #e4f6ff;
+  color: #08739b;
+}
+
+.status-badge.out-for-delivery {
+  background: #e8e4ff;
+  color: #5b42b8;
+}
+
+.status-badge.completed {
+  background: #dcf8e4;
+  color: #08783c;
+}
+
+.status-badge.cancelled,
+.status-badge.expired {
+  background: #ffe4e4;
+  color: #c62828;
+}
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.admin-empty {
+  text-align: center;
+  padding: 35px;
+  color: #78867f;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .admin-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 800px) {
+
+  .admin-sidebar {
+    width: 200px;
+  }
+
+  .admin-main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    padding: 22px;
+  }
+
+  .role-cards,
+  .donation-status-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .admin-sidebar {
+    position: static;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .admin-page {
+    display: block;
+  }
+
+  .admin-main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+}

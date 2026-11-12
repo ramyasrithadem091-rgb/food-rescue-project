@@ -1,0 +1,33 @@
+/* ================================
+   FOOD RESCUE - BASE STYLES
+================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+
+  background: #f8fff9;
+  color: #173b2c;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}

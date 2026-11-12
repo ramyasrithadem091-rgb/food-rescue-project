@@ -1,0 +1,597 @@
+/* =========================================
+   FOOD RESCUE - LANDING PAGE
+   All new classes start with "fr-" so they
+   cannot clash with your other stylesheets.
+========================================= */
+
+:root {
+  --fr-green: #138a4b;
+  --fr-green-dark: #0f633e;
+  --fr-ink: #123d2a;
+  --fr-muted: #587066;
+  --fr-line: #d9eadf;
+  --fr-soft: #effbf2;
+  --fr-orange: #ef711d;
+  --fr-orange-dark: #e66b16;
+  --fr-purple: #8743c6;
+  --fr-purple-dark: #6f32aa;
+}
+
+.fr-wrap {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+}
+
+.fr-heading {
+  max-width: 680px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.fr-heading h2,
+.fr-help-text h2,
+.fr-final h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: var(--fr-ink);
+}
+
+.fr-heading p {
+  margin-top: 14px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--fr-muted);
+}
+
+/* ---- keyboard focus (all new links and buttons) ---- */
+
+.fr-btn:focus-visible,
+.fr-link:focus-visible,
+.fr-footer a:focus-visible,
+.fr-faq summary:focus-visible,
+.fr-help-text a:focus-visible,
+.role-container a.role-card:focus-visible,
+.hero-buttons a:focus-visible {
+  outline: 3px solid var(--fr-orange);
+  outline-offset: 3px;
+}
+
+/* ---- shared button ---- */
+
+.fr-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.fr-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   NAVBAR ADDITIONS
+========================================= */
+
+.navbar-links {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .nav-link-extra {
+    display: none;
+  }
+}
+
+/* =========================================
+   HERO ADDITIONS (links instead of buttons)
+========================================= */
+
+.hero-buttons a {
+  text-decoration: none;
+}
+
+.role-container a.role-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================================
+   ACCOUNTS
+========================================= */
+
+.fr-accounts {
+  padding: 100px 0;
+  scroll-margin-top: 72px;
+  background: #ffffff;
+  border-top: 1px solid var(--fr-line);
+}
+
+.fr-account-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.fr-account {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 36px 36px;
+  border-radius: 28px;
+  border: 2px solid;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(24, 90, 52, 0.08);
+}
+
+.fr-account-donor {
+  border-color: #f4a261;
+  background: linear-gradient(180deg, #fff7ef 0%, #ffffff 45%);
+}
+
+.fr-account-volunteer {
+  border-color: #b98ae6;
+  background: linear-gradient(180deg, #f7f0ff 0%, #ffffff 45%);
+}
+
+.fr-account-icon {
+  width: 66px;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  margin-bottom: 22px;
+  color: #ffffff;
+}
+
+.fr-account-donor .fr-account-icon {
+  background: var(--fr-orange);
+}
+
+.fr-account-volunteer .fr-account-icon {
+  background: var(--fr-purple);
+}
+
+.fr-account h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  color: var(--fr-ink);
+}
+
+.fr-account-for {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--fr-muted);
+}
+
+.fr-account ul {
+  list-style: none;
+  margin: 26px 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fr-account li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #2f4a3d;
+}
+
+.fr-account li svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.fr-account-donor li svg {
+  color: var(--fr-orange-dark);
+}
+
+.fr-account-volunteer li svg {
+  color: var(--fr-purple);
+}
+
+.fr-account-actions {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+}
+
+.fr-btn-donor {
+  background: var(--fr-orange);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(239, 113, 29, 0.28);
+}
+
+.fr-btn-donor:hover {
+  background: var(--fr-orange-dark);
+}
+
+.fr-btn-volunteer {
+  background: var(--fr-purple);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(135, 67, 198, 0.28);
+}
+
+.fr-btn-volunteer:hover {
+  background: var(--fr-purple-dark);
+}
+
+.fr-link {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--fr-green);
+  text-underline-offset: 4px;
+}
+
+.fr-link:hover {
+  color: var(--fr-green-dark);
+}
+
+/* =========================================
+   WHO WE HELP
+========================================= */
+
+.fr-help {
+  padding: 100px 0;
+  scroll-margin-top: 72px;
+  background: var(--fr-soft);
+}
+
+.fr-help-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 64px;
+}
+
+.fr-help-text p {
+  margin-top: 18px;
+  max-width: 560px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--fr-muted);
+}
+
+.fr-help-text a {
+  color: var(--fr-green);
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+.fr-help-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fr-help-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 24px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid var(--fr-line);
+  color: var(--fr-green);
+}
+
+.fr-help-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  color: var(--fr-ink);
+}
+
+.fr-help-card p {
+  margin-top: 3px;
+  font-size: 14px;
+  color: var(--fr-muted);
+}
+
+.fr-areas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding-top: 6px;
+  color: var(--fr-green);
+}
+
+.fr-areas span {
+  padding: 8px 16px;
+  border-radius: 30px;
+  background: #ffffff;
+  border: 1px solid #bde7c8;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b5a3b;
+}
+
+/* =========================================
+   WHY IT WORKS
+========================================= */
+
+.fr-why {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.fr-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.fr-why-card {
+  padding: 32px 28px;
+  border-radius: 22px;
+  background: var(--fr-soft);
+  border: 1px solid var(--fr-line);
+}
+
+.fr-why-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  color: var(--fr-green);
+  border: 1px solid #bde7c8;
+}
+
+.fr-why-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  line-height: 1.3;
+  color: var(--fr-ink);
+}
+
+.fr-why-card p {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--fr-muted);
+}
+
+/* =========================================
+   FAQ
+========================================= */
+
+.fr-faq {
+  padding: 100px 0;
+  scroll-margin-top: 72px;
+  background: #f8fff9;
+  border-top: 1px solid var(--fr-line);
+}
+
+.fr-faq-wrap {
+  max-width: 820px;
+}
+
+.fr-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fr-faq details {
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid var(--fr-line);
+}
+
+.fr-faq summary {
+  cursor: pointer;
+  padding: 20px 24px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--fr-ink);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.fr-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.fr-faq summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--fr-green);
+}
+
+.fr-faq details[open] summary::after {
+  content: "\2212";
+}
+
+.fr-faq details p {
+  padding: 0 24px 22px;
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--fr-muted);
+}
+
+/* =========================================
+   FINAL CALL
+========================================= */
+
+.fr-final {
+  padding: 90px 0;
+  background: var(--fr-ink);
+}
+
+.fr-final-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+
+.fr-final h2 {
+  max-width: 760px;
+  color: #ffffff;
+}
+
+.fr-final-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.fr-btn-light {
+  background: #ffffff;
+  color: var(--fr-ink);
+}
+
+.fr-btn-light:hover {
+  background: #f1f1f1;
+}
+
+.fr-btn-outline {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.fr-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.fr-footer {
+  padding: 34px 0;
+  background: #0c2a1d;
+  color: #cfe3d7;
+}
+
+.fr-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.fr-footer-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.fr-footer-brand svg {
+  color: #53c878;
+}
+
+.fr-footer-brand strong {
+  font-size: 17px;
+  color: #ffffff;
+}
+
+.fr-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.fr-footer-links a {
+  font-size: 14px;
+  color: #cfe3d7;
+  text-decoration: none;
+}
+
+.fr-footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* =========================================
+   TABLET AND MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+  .fr-account-grid,
+  .fr-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fr-help-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .fr-accounts,
+  .fr-help,
+  .fr-why,
+  .fr-faq {
+    padding: 72px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .fr-account {
+    padding: 30px 22px 28px;
+  }
+
+  .fr-account h3 {
+    font-size: 26px;
+  }
+
+  .fr-btn {
+    width: 100%;
+  }
+
+  .fr-account-actions {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .fr-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fr-btn {
+    transition: none;
+  }
+
+  .fr-btn:hover {
+    transform: none;
+  }
+}

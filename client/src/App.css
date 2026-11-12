@@ -1,0 +1,1181 @@
+/* ================================
+   FOOD RESCUE - GLOBAL STYLES
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: #f8fff9;
+  color: #173b2c;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #d9eadf;
+  box-shadow: 0 4px 20px rgba(24, 90, 52, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 14px 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* ================================
+   LOGO
+================================ */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 210px;
+}
+
+.logo-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    #138a4b,
+    #53c878
+  );
+
+  color: white;
+
+  box-shadow:
+    0 6px 15px rgba(19, 138, 75, 0.25);
+}
+
+.logo h2 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  color: #138a4b;
+  letter-spacing: -0.5px;
+}
+
+.logo h2 span {
+  color: #f47b20;
+}
+
+.logo p {
+  font-size: 10px;
+  color: #63776d;
+  margin-top: 2px;
+}
+
+/* ================================
+   NAV LINKS
+================================ */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #29463a;
+  font-size: 14px;
+  font-weight: 600;
+
+  padding: 10px 4px;
+
+  position: relative;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+
+  width: 0;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background: #159447;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #159447;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ================================
+   ACTION BUTTONS
+================================ */
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-btn,
+.login-btn,
+.register-btn {
+  border: none;
+  cursor: pointer;
+
+  padding: 10px 16px;
+
+  border-radius: 25px;
+
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  background: #f1f8f3;
+  color: #315746;
+
+  border: 1px solid #d4e8da;
+}
+
+.language-btn:hover {
+  background: #e5f5e9;
+}
+
+.login-btn {
+  background: white;
+  color: #138a4b;
+
+  border: 1px solid #138a4b;
+}
+
+.login-btn:hover {
+  background: #138a4b;
+  color: white;
+}
+
+.register-btn {
+  background: linear-gradient(
+    135deg,
+    #138a4b,
+    #22a95e
+  );
+
+  color: white;
+
+  box-shadow:
+    0 5px 15px rgba(19, 138, 75, 0.22);
+}
+
+.register-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(19, 138, 75, 0.3);
+}
+
+.menu-btn {
+  display: none;
+
+  border: none;
+  background: #eef8f1;
+
+  padding: 9px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 1000px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .navbar-container {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    min-width: auto;
+  }
+
+  .logo h2 {
+    font-size: 19px;
+  }
+
+  .logo p {
+    display: none;
+  }
+
+  .language-btn,
+  .login-btn {
+    display: none;
+  }
+
+  .register-btn {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+}
+/* =========================================
+   FOOD RESCUE HERO SECTION
+========================================= */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 75px);
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 10% 20%, rgba(91, 214, 137, 0.18), transparent 28%),
+    radial-gradient(circle at 90% 25%, rgba(255, 177, 72, 0.15), transparent 25%),
+    linear-gradient(135deg, #f8fff9 0%, #effbf2 50%, #fffdf5 100%);
+
+  padding: 70px 0 80px;
+}
+
+/* Decorative background circles */
+
+.hero-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.circle-one {
+  width: 360px;
+  height: 360px;
+  background: rgba(76, 193, 112, 0.08);
+  left: -180px;
+  top: 80px;
+}
+
+.circle-two {
+  width: 300px;
+  height: 300px;
+  background: rgba(244, 123, 32, 0.08);
+  right: -130px;
+  bottom: 80px;
+}
+
+/* =========================================
+   HERO CONTAINER
+========================================= */
+
+.hero-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 70px;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================
+   HERO LEFT
+========================================= */
+
+.hero-content {
+  position: relative;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 16px;
+
+  border-radius: 30px;
+
+  background: #e4f8e9;
+  border: 1px solid #bde7c8;
+
+  color: #178448;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow: 0 5px 15px rgba(23, 132, 72, 0.08);
+}
+
+.hero-content h1 {
+  margin-top: 25px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 1.02;
+
+  letter-spacing: -2px;
+
+  color: #123d2a;
+}
+
+.hero-content h1 span {
+  color: #ef711d;
+
+  font-style: italic;
+}
+
+.hero-description {
+  max-width: 590px;
+
+  margin-top: 25px;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: #587066;
+}
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+
+  margin-top: 32px;
+}
+
+.primary-btn,
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 14px 23px;
+
+  border-radius: 14px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  border: none;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #138a4b,
+    #29ae62
+  );
+
+  box-shadow:
+    0 10px 25px rgba(19, 138, 75, 0.22);
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 30px rgba(19, 138, 75, 0.3);
+}
+
+.secondary-btn {
+  background: white;
+
+  color: #138a4b;
+
+  border: 1.5px solid #7bc694;
+}
+
+.secondary-btn:hover {
+  background: #effaf2;
+
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   TRUST FEATURES
+========================================= */
+
+.hero-features {
+  display: flex;
+  gap: 25px;
+
+  margin-top: 38px;
+}
+
+.hero-features > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+
+  color: #15904c;
+}
+
+.hero-features svg {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.hero-features span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hero-features strong {
+  font-size: 12px;
+  color: #244b3a;
+}
+
+.hero-features small {
+  font-size: 10px;
+  color: #819188;
+}
+
+/* =========================================
+   HERO RIGHT VISUAL
+========================================= */
+
+.hero-visual {
+  position: relative;
+
+  min-height: 480px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visual-card {
+  width: 430px;
+  min-height: 390px;
+
+  position: relative;
+
+  padding: 45px 35px;
+
+  border-radius: 40px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.96),
+      rgba(242,255,245,0.95)
+    );
+
+  border: 2px solid rgba(73, 180, 101, 0.35);
+
+  box-shadow:
+    0 25px 70px rgba(24, 91, 50, 0.13),
+    inset 0 0 0 8px rgba(255,255,255,0.55);
+
+  text-align: center;
+
+  transform: rotate(1deg);
+
+  transition: 0.4s ease;
+}
+
+.visual-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 12px;
+
+  border-radius: 30px;
+
+  border: 1px dashed rgba(41, 165, 85, 0.3);
+
+  pointer-events: none;
+}
+
+.visual-card:hover {
+  transform: rotate(0deg) translateY(-5px);
+}
+
+/* Heart-shaped visual area */
+
+.visual-icon {
+  width: 130px;
+  height: 130px;
+
+  margin: 5px auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #dff7e5,
+      #fff5d9
+    );
+
+  color: #15904c;
+
+  border: 10px solid white;
+
+  box-shadow:
+    0 15px 30px rgba(41, 145, 74, 0.13);
+}
+
+.visual-card h2 {
+  font-family: Georgia, serif;
+
+  font-size: 30px;
+
+  color: #173e2b;
+}
+
+.visual-card > p {
+  margin-top: 5px;
+
+  color: #ef711d;
+
+  font-family: Georgia, serif;
+
+  font-size: 19px;
+
+  font-style: italic;
+}
+
+/* =========================================
+   FOOD FLOW
+========================================= */
+
+.food-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  margin-top: 35px;
+}
+
+.food-flow > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.food-flow span {
+  font-size: 30px;
+}
+
+.food-flow small {
+  font-size: 10px;
+  color: #60766a;
+  font-weight: 600;
+}
+
+.food-flow > svg {
+  color: #15904c;
+}
+
+/* =========================================
+   FLOATING CARD
+========================================= */
+
+.floating-card {
+  position: absolute;
+
+  bottom: 30px;
+  right: -10px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px 20px;
+
+  background: white;
+
+  border: 1px solid #d6eadb;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 35px rgba(22, 74, 43, 0.13);
+
+  animation: floating 3s ease-in-out infinite;
+}
+
+.floating-card svg {
+  color: #ef711d;
+}
+
+.floating-card div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.floating-card strong {
+  font-size: 13px;
+  color: #214c38;
+}
+
+.floating-card small {
+  color: #89968f;
+  font-size: 10px;
+}
+
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* =========================================
+   ROLE CARDS
+========================================= */
+
+.role-container {
+  width: min(1180px, 92%);
+
+  margin: 65px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+
+  position: relative;
+  z-index: 3;
+}
+
+.role-container .role-card {
+  min-height: 135px;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  position: relative;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,0.88);
+
+  border: 2px solid;
+
+  box-shadow:
+    0 12px 30px rgba(31, 82, 50, 0.07);
+
+  transition: 0.35s ease;
+}
+
+.role-container .role-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 35px rgba(31, 82, 50, 0.13);
+}
+
+.role-icon {
+  width: 53px;
+  height: 53px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  font-size: 26px;
+
+  background: #f4faf5;
+}
+
+.role-container .role-card h3 {
+  font-family: Georgia, serif;
+
+  margin: 0;
+
+  font-size: 19px;
+}
+
+.role-container .role-card p {
+  margin-top: 5px;
+
+  color: #77867d;
+
+  font-size: 11px;
+
+  line-height: 1.4;
+}
+
+.role-container .role-card > svg {
+  margin-left: auto;
+
+  flex-shrink: 0;
+
+  opacity: 0.65;
+}
+
+/* Individual card borders */
+
+.donor-card {
+  border-color: #f4a261;
+}
+
+.donor-card h3 {
+  color: #e66b16;
+}
+
+.receiver-card {
+  border-color: #63a4e8;
+}
+
+.receiver-card h3 {
+  color: #2478c5;
+}
+
+.volunteer-card {
+  border-color: #a66be5;
+}
+
+.volunteer-card h3 {
+  color: #8743c6;
+}
+
+.admin-card {
+  border-color: #58bb7b;
+}
+
+.admin-card h3 {
+  color: #16874b;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .hero-container {
+    grid-template-columns: 1fr;
+
+    text-align: center;
+
+    gap: 45px;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-description {
+    max-width: 650px;
+  }
+
+  .hero-features {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-visual {
+    min-height: 430px;
+  }
+
+  .role-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .hero {
+    padding: 45px 0 55px;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hero-visual {
+    min-height: 370px;
+  }
+
+  .visual-card {
+    width: 90%;
+    min-height: 330px;
+
+    padding: 30px 20px;
+
+    border-radius: 30px;
+  }
+
+  .visual-icon {
+    width: 95px;
+    height: 95px;
+  }
+
+  .food-flow {
+    gap: 7px;
+  }
+
+  .food-flow span {
+    font-size: 22px;
+  }
+
+  .floating-card {
+    right: 2%;
+    bottom: 5px;
+  }
+
+  .role-container {
+    grid-template-columns: 1fr;
+  }
+
+  .role-container .role-card {
+    min-height: 105px;
+  }
+}
+/* =========================================
+   HOW IT WORKS SECTION
+========================================= */
+
+.how-section {
+  width: 100%;
+  padding: 110px 6%;
+  background:
+    radial-gradient(circle at 10% 30%, rgba(50, 190, 120, 0.10), transparent 28%),
+    radial-gradient(circle at 90% 70%, rgba(255, 180, 50, 0.10), transparent 25%),
+    #f8fff9;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative circles */
+
+.how-section::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(42, 174, 102, 0.07);
+  left: -130px;
+  top: 80px;
+}
+
+.how-section::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: rgba(255, 160, 40, 0.07);
+  right: -100px;
+  bottom: 50px;
+}
+
+/* Heading */
+
+.section-heading {
+  max-width: 750px;
+  margin: 0 auto 70px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.section-tag {
+  display: inline-block;
+  padding: 9px 18px;
+  border: 1px solid #b9e8cb;
+  border-radius: 30px;
+  color: #15934f;
+  background: #effcf4;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.1;
+  color: #103d2a;
+}
+
+.section-heading h2 span {
+  color: #f46b18;
+  font-style: italic;
+}
+
+.section-heading p {
+  max-width: 650px;
+  margin: 20px auto 0;
+  color: #557064;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* Steps */
+
+.steps-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 22px;
+  position: relative;
+  z-index: 2;
+}
+
+.step-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.step-card {
+  width: 100%;
+  min-height: 290px;
+  padding: 32px 28px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #d5eadc;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(25, 100, 60, 0.08);
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+/* Top colored line */
+
+.step-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #15934f,
+    #f46b18
+  );
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 55px rgba(25, 100, 60, 0.14);
+  border-color: #a9ddbd;
+}
+
+/* Step number */
+
+.step-number {
+  position: absolute;
+  right: 22px;
+  top: 18px;
+  font-size: 48px;
+  font-weight: 800;
+  color: rgba(21, 147, 79, 0.08);
+  line-height: 1;
+}
+
+/* Icon */
+
+.step-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    #e5f9ec,
+    #fff8df
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  color: #15934f;
+  border: 1px solid #ccebd7;
+}
+
+.step-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 1.8;
+}
+
+/* Text */
+
+.step-card h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  color: #123d2b;
+}
+
+.step-card p {
+  margin: 0;
+  color: #64756c;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Arrow */
+
+.step-arrow {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  margin-left: 10px;
+  color: #15934f;
+  stroke-width: 1.5;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .how-section {
+    padding: 80px 5%;
+  }
+
+  .steps-container {
+    flex-direction: column;
+    max-width: 600px;
+  }
+
+  .step-wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .step-arrow {
+    transform: rotate(90deg);
+    margin: 18px 0;
+  }
+
+  .step-card {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .section-heading h2 {
+    font-size: 42px;
+  }
+
+  .section-heading p {
+    font-size: 15px;
+  }
+
+  .step-card {
+    padding: 28px 22px;
+  }
+
+}

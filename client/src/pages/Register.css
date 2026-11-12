@@ -1,0 +1,320 @@
+
+/* ================================
+   REGISTER PAGE
+================================ */
+
+.register-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+
+  background: linear-gradient(
+    135deg,
+    #eefaf3 0%,
+    #f8fff9 50%,
+    #fffdf3 100%
+  );
+}
+
+/* ================================
+   REGISTER CARD
+================================ */
+
+.register-container {
+  width: 100%;
+  max-width: 650px;
+  box-sizing: border-box;
+
+  background: #ffffff;
+  padding: 42px 45px;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 80, 40, 0.10),
+    0 4px 12px rgba(0, 0, 0, 0.04);
+
+  border: 1px solid #e1eee6;
+}
+
+/* ================================
+   HEADING
+================================ */
+
+.register-container h1 {
+  margin: 0;
+  color: #123c2a;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.register-subtitle {
+  margin: 8px 0 30px;
+  color: #6b7d74;
+  font-size: 15px;
+}
+
+/* ================================
+   RECEIVER SECTION HEADINGS
+================================ */
+
+.register-container h3 {
+  margin: 24px 0 16px;
+  padding-bottom: 10px;
+
+  color: #16834d;
+  font-size: 19px;
+  font-weight: 700;
+
+  border-bottom: 1px solid #e1eee6;
+}
+
+/* ================================
+   SECTION SEPARATOR
+================================ */
+
+.register-container hr {
+  border: none;
+  border-top: 1px solid #e1eee6;
+  margin: 28px 0;
+}
+
+/* ================================
+   FORM GROUP
+================================ */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+
+  color: #183b2c;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================================
+   INPUTS & SELECT
+================================ */
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+
+  height: 48px;
+  padding: 0 15px;
+
+  border: 1.5px solid #d5e3dc;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #26382f;
+
+  font-size: 14px;
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #9aa9a1;
+}
+
+/* Focus effect */
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #16834d;
+  box-shadow: 0 0 0 3px rgba(22, 131, 77, 0.10);
+}
+
+/* Select */
+
+.form-group select {
+  cursor: pointer;
+  appearance: auto;
+}
+
+/* Number inputs */
+
+.form-group input[type="number"] {
+  appearance: textfield;
+}
+
+/* ================================
+   FIELD HINT
+================================ */
+
+.field-hint {
+  display: block;
+  margin-top: 6px;
+
+  color: #84928b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ================================
+   ERROR MESSAGE
+================================ */
+
+.error-message {
+  display: flex;
+  align-items: center;
+
+  margin: 7px 0 0;
+
+  color: #d64545;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.error-message::before {
+  content: "⚠";
+  margin-right: 5px;
+  font-size: 11px;
+}
+
+/* ================================
+   PASSWORD RULES
+================================ */
+
+.password-rules {
+  margin-top: 10px;
+  padding: 12px 15px;
+
+  background: #f7faf8;
+  border: 1px solid #e4eee8;
+  border-radius: 10px;
+}
+
+.password-rules p {
+  margin: 0 0 8px;
+
+  color: #365247;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.password-rules ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 5px 15px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.password-rules li {
+  color: #718078;
+  font-size: 11px;
+}
+
+.password-rules li::before {
+  content: "✓";
+  margin-right: 5px;
+
+  color: #16834d;
+  font-weight: 700;
+}
+
+/* ================================
+   REGISTER BUTTON
+================================ */
+
+.register-button {
+  width: 100%;
+  height: 50px;
+
+  margin-top: 8px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #16834d,
+    #0f6f40
+  );
+
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 15px rgba(22, 131, 77, 0.20);
+
+  transition: all 0.2s ease;
+}
+
+.register-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(22, 131, 77, 0.25);
+}
+
+.register-button:active {
+  transform: translateY(0);
+}
+
+.register-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ================================
+   SUCCESS / SERVER MESSAGE
+================================ */
+
+.register-message {
+  margin-top: 18px;
+  padding: 11px 14px;
+
+  border-radius: 8px;
+
+  background: #eef9f2;
+  border: 1px solid #ccebd8;
+
+  color: #197044;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+  .register-page {
+    padding: 25px 15px;
+    align-items: flex-start;
+  }
+
+  .register-container {
+    padding: 30px 24px;
+    border-radius: 18px;
+  }
+
+  .register-container h1 {
+    font-size: 27px;
+  }
+
+  .register-container h3 {
+    font-size: 17px;
+  }
+
+  .password-rules ul {
+    grid-template-columns: 1fr;
+  }
+}
