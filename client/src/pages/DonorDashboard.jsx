@@ -74,7 +74,7 @@ function DonorDashboard() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/donations/${donationId}/payment-paid`,
+        `/api/donations/${donationId}/payment-paid`,
         {
           method: "PATCH",
           headers: { Authorization: `Bearer ${token}` }
@@ -147,7 +147,7 @@ function DonorDashboard() {
 
         const response =
           await fetch(
-            "http://localhost:5000/api/donations/my",
+            "/api/donations/my",
             {
               method: "GET",
 

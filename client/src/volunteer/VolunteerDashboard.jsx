@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import "./VolunteerDashboard.css";
 
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "";
 
 async function apiRequest(path, options = {}) {
   const response = await fetch(`${API_BASE_URL}${path}`, options);

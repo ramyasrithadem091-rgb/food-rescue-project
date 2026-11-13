@@ -102,7 +102,7 @@ function ReceiverDashboard() {
       */
 
       const response = await fetch(
-        "http://localhost:5000/api/receiver/donations",
+        "/api/receiver/donations",
         {
           method: "GET",
 
@@ -168,7 +168,7 @@ function ReceiverDashboard() {
       */
 
       const response = await fetch(
-        "http://localhost:5000/api/receiver/accepted",
+        "/api/receiver/accepted",
         {
           method: "GET",
 
@@ -230,7 +230,7 @@ function ReceiverDashboard() {
       */
 
       const response = await fetch(
-        "http://localhost:5000/api/receiver/notifications",
+        "/api/receiver/notifications",
         {
           method: "GET",
 
@@ -321,7 +321,7 @@ setDonations(uniqueDonations);
         }
 
         const response = await fetch(
-          `http://localhost:5000/api/receiver/notifications/${notificationId}/read`,
+          `/api/receiver/notifications/${notificationId}/read`,
           {
             method: "PATCH",
 
@@ -388,7 +388,7 @@ setDonations(uniqueDonations);
         }
 
         const response = await fetch(
-          "http://localhost:5000/api/receiver/notifications/read-all",
+          "/api/receiver/notifications/read-all",
           {
             method: "PATCH",
 
@@ -473,7 +473,7 @@ setDonations(uniqueDonations);
         }
 
         const response = await fetch(
-          `http://localhost:5000/api/receiver/donations/${donation._id}/accept`,
+          `/api/receiver/donations/${donation._id}/accept`,
           {
             method: "POST",
 

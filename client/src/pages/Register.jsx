@@ -221,7 +221,7 @@ function Register() {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/register",
+        "/api/register",
         {
           method: "POST",
           headers: {

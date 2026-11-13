@@ -118,7 +118,7 @@ function AdminDashboard() {
       // ----------------------------------------------
 
       const statsResponse = await fetch(
-        "http://localhost:5000/api/admin/dashboard",
+        "/api/admin/dashboard",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -151,7 +151,7 @@ function AdminDashboard() {
       // ----------------------------------------------
 
       const usersResponse = await fetch(
-        "http://localhost:5000/api/admin/users",
+        "/api/admin/users",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -184,7 +184,7 @@ function AdminDashboard() {
       // ----------------------------------------------
 
       const donationsResponse = await fetch(
-        "http://localhost:5000/api/admin/donations",
+        "/api/admin/donations",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -217,7 +217,7 @@ function AdminDashboard() {
       // ----------------------------------------------
 
       const volunteersResponse = await fetch(
-        "http://localhost:5000/api/admin/volunteers",
+        "/api/admin/volunteers",
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -355,7 +355,7 @@ function AdminDashboard() {
 
 
       const response = await fetch(
-        `http://localhost:5000/api/admin/users/${userId}/role`,
+        `/api/admin/users/${userId}/role`,
         {
           method: "PATCH",
 
@@ -439,7 +439,7 @@ function AdminDashboard() {
 
 
       const response = await fetch(
-        `http://localhost:5000/api/admin/users/${userId}`,
+        `/api/admin/users/${userId}`,
         {
           method: "DELETE",
 
@@ -504,7 +504,7 @@ function AdminDashboard() {
 
 
       const response = await fetch(
-        `http://localhost:5000/api/admin/donations/${donationId}/status`,
+        `/api/admin/donations/${donationId}/status`,
         {
           method: "PATCH",
 
@@ -589,7 +589,7 @@ function AdminDashboard() {
   const [receiverError, setReceiverError] = useState("");
 
   const apiGet = async (path) => {
-    const response = await fetch(`http://localhost:5000${path}`, {
+    const response = await fetch(`${path}`, {
       headers: { Authorization: `Bearer ${getToken()}` }
     });
     const data = await response.json();
@@ -666,7 +666,7 @@ function AdminDashboard() {
     try {
       setActionLoading(true);
       const response = await fetch(
-        `http://localhost:5000/api/admin/receiver-requests/${r._id}/approve`,
+        `/api/admin/receiver-requests/${r._id}/approve`,
         {
           method: "POST",
           headers: {
@@ -702,7 +702,7 @@ function AdminDashboard() {
     }
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/receiver-requests/${r._id}/reject`,
+        `/api/admin/receiver-requests/${r._id}/reject`,
         {
           method: "POST",
           headers: {
@@ -768,7 +768,7 @@ function AdminDashboard() {
       setActionLoading(true);
 
       const response = await fetch(
-        "http://localhost:5000/api/admin/receivers",
+        "/api/admin/receivers",
         {
           method: "POST",
           headers: {
@@ -809,7 +809,7 @@ function AdminDashboard() {
   const handleToggleReceiver = async (id, isActive) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/receivers/${id}/active`,
+        `/api/admin/receivers/${id}/active`,
         {
           method: "PATCH",
           headers: {

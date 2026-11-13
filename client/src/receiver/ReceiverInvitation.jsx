@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const API = "http://localhost:5000/api";
+const API = "/api";
 
 function ReceiverInvitation() {
   const { token } = useParams();
